@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brutal-bg: #f0f0f0;
+  --color-brutal-text: #000000;
+  --color-brutal-primary: #ccff00; /* Neon Green */
+  --color-brutal-secondary: #ff00ff; /* Hot Pink */
+  --color-brutal-accent: #0000ff; /* Electric Blue */
+  --color-brutal-border: #000000;
+  
+  --font-display: "Courier New", Courier, monospace;
+  --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --shadow-brutal: 4px 4px 0px 0px #000000;
+  --shadow-brutal-hover: 6px 6px 0px 0px #000000;
+  --shadow-brutal-sm: 2px 2px 0px 0px #000000;
+}
+
+:root {
+  background-color: var(--color-brutal-bg);
+  color: var(--color-brutal-text);
+  font-family: var(--font-body);
+}
+
+/* Reset & Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+
+/* Brutalist Utilities */
+.brutal-border {
+  border: 3px solid var(--color-brutal-border);
+}
+
+.brutal-shadow {
+  box-shadow: var(--shadow-brutal);
+}
+
+.brutal-shadow:hover {
+  box-shadow: var(--shadow-brutal-hover);
+  transform: translate(-2px, -2px);
+}
+
+.brutal-btn {
+  background-color: var(--color-brutal-primary);
+  color: var(--color-brutal-text);
+  border: 3px solid var(--color-brutal-border);
+  box-shadow: var(--shadow-brutal);
+  font-family: var(--font-display);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.brutal-btn:hover {
+  background-color: var(--color-brutal-secondary);
+  box-shadow: var(--shadow-brutal-hover);
+  transform: translate(-2px, -2px);
+}
+
+.brutal-btn:active {
+  box-shadow: 0px 0px 0px 0px #000000;
+  transform: translate(2px, 2px);
+}
+
+.brutal-card {
+  background-color: white;
+  border: 3px solid var(--color-brutal-border);
+  box-shadow: var(--shadow-brutal);
+  transition: all 0.2s ease;
+}
+
+.brutal-card:hover {
+  box-shadow: var(--shadow-brutal-hover);
+  transform: translate(-2px, -2px);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brutal-bg);
+  border-left: 3px solid var(--color-brutal-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brutal-text);
+  border: 2px solid var(--color-brutal-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brutal-accent);
+}
